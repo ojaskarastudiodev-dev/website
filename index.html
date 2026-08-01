@@ -1,35 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ojaskara Studio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ojaskara Studio creates thoughtful games, useful apps, and focused digital experiences, including SolveBox." />
+  <meta name="theme-color" content="#070711" />
+  <meta property="og:title" content="Ojaskara Studio — Thoughtful apps. Playful ideas." />
+  <meta property="og:description" content="Games, utility apps, and focused digital experiences built with curiosity and care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ojaskarastudio.com/" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ojaskara Studio — Thoughtful apps. Playful ideas." />
+  <meta name="twitter:description" content="Games, utility apps, and focused digital experiences built with curiosity and care." />
+  <title>Ojaskara Studio — Thoughtful apps. Playful ideas.</title>
+  <style>
+    :root {
+      --bg: #070711;
+      --surface: #101023;
+      --surface-2: #15152d;
+      --text: #f5f4ff;
+      --muted: #a09db8;
+      --line: rgba(255, 255, 255, 0.1);
+      --violet: #8377ff;
+      --cyan: #35d8ff;
+      --amber: #f3b45b;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 76% 12%, rgba(53, 216, 255, 0.08), transparent 27rem),
+        radial-gradient(circle at 22% 20%, rgba(131, 119, 255, 0.12), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    .shell { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
+    .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; padding: .7rem 1rem; background: var(--text); color: var(--bg); border-radius: .6rem; }
+    .skip-link:focus { top: 1rem; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(7, 7, 17, 0.76);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; font-weight: 760; letter-spacing: .05em; }
+    .brand-mark {
+      width: 34px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(131, 119, 255, .6);
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(131,119,255,.22), rgba(53,216,255,.08));
+      box-shadow: 0 0 28px rgba(131,119,255,.18);
+    }
+    .brand-mark::before { content: "◇"; color: var(--cyan); font-size: 1.15rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.35rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .92rem; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--text); }
+    .nav-cta { padding: .58rem .92rem; border: 1px solid rgba(131,119,255,.45); border-radius: 999px; }
+
+    .hero { min-height: 690px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(2rem, 6vw, 6rem); padding: 5.5rem 0 4rem; }
+    .eyebrow { display: flex; align-items: center; gap: .65rem; color: var(--cyan); text-transform: uppercase; letter-spacing: .2em; font-size: .73rem; font-weight: 750; }
+    .eyebrow::before { content: ""; width: 1.8rem; height: 1px; background: currentColor; }
+    h1 { margin: 1.2rem 0 1rem; font-size: clamp(3.1rem, 8vw, 6.5rem); line-height: .93; letter-spacing: -.065em; max-width: 8ch; }
+    h1 span { display: block; background: linear-gradient(100deg, var(--violet), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-copy { max-width: 600px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .75rem 1.15rem; border-radius: 12px; text-decoration: none; font-weight: 700; transition: transform .18s ease, border-color .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #090914; background: linear-gradient(120deg, #a097ff, #55dfff); box-shadow: 0 12px 40px rgba(78, 175, 255, .16); }
+    .button-secondary { color: var(--text); border: 1px solid var(--line); background: rgba(255,255,255,.03); }
+
+    .puzzle-stage { position: relative; min-height: 480px; display: grid; place-items: center; isolation: isolate; }
+    .orbit, .orbit::before, .orbit::after { position: absolute; border: 1px solid rgba(131,119,255,.22); border-radius: 50%; }
+    .orbit { width: 410px; height: 410px; animation: spin 28s linear infinite; }
+    .orbit::before { content: ""; inset: 42px; border-color: rgba(53,216,255,.15); }
+    .orbit::after { content: ""; width: 11px; height: 11px; left: 29px; top: 86px; background: var(--amber); box-shadow: 0 0 22px var(--amber); border: 0; }
+    .cube {
+      width: min(310px, 72vw);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      position: relative;
+      border: 1px solid rgba(131,119,255,.42);
+      border-radius: 54px;
+      background: linear-gradient(145deg, rgba(131,119,255,.14), rgba(53,216,255,.04));
+      box-shadow: inset 0 0 80px rgba(83, 75, 190, .12), 0 30px 100px rgba(0,0,0,.45);
+      transform: rotate(4deg);
+    }
+    .cube::before, .cube::after { content: ""; position: absolute; inset: 28px; border: 1px solid rgba(255,255,255,.08); border-radius: 40px; transform: rotate(-8deg); }
+    .cube::after { inset: 65px; border-color: rgba(53,216,255,.2); transform: rotate(13deg); }
+    .cube-core { width: 86px; aspect-ratio: 1; border-radius: 24px; background: radial-gradient(circle, #efffff 0 5%, var(--cyan) 8%, #3f5fe8 34%, rgba(55,33,153,.1) 68%); box-shadow: 0 0 60px rgba(53,216,255,.75), 0 0 120px rgba(131,119,255,.36); animation: pulse 3s ease-in-out infinite; }
+    .glyph { position: absolute; color: rgba(255,255,255,.55); font-size: 1.2rem; }
+    .glyph-one { top: 26px; right: 52px; }
+    .glyph-two { bottom: 40px; left: 40px; color: var(--amber); }
+    .glyph-three { right: 17px; bottom: 107px; color: var(--cyan); }
+
+    section { padding: 6rem 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2.4rem; }
+    .section-kicker { color: var(--amber); text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 750; }
+    h2 { font-size: clamp(2rem, 5vw, 3.7rem); line-height: 1.05; letter-spacing: -.045em; margin: .6rem 0 0; }
+    .section-head p { color: var(--muted); max-width: 480px; margin: 0; }
+
+    .game-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; min-height: 430px; border: 1px solid var(--line); border-radius: 28px; background: linear-gradient(135deg, var(--surface-2), var(--surface)); }
+    .game-copy { padding: clamp(2rem, 5vw, 4.2rem); display: flex; flex-direction: column; justify-content: center; }
+    .tag { width: fit-content; padding: .38rem .68rem; border-radius: 999px; background: rgba(53,216,255,.08); border: 1px solid rgba(53,216,255,.22); color: var(--cyan); font-size: .76rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .game-copy h3 { margin: 1.2rem 0 .8rem; font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1; letter-spacing: -.06em; }
+    .game-copy p { color: var(--muted); max-width: 520px; }
+    .feature-list { display: flex; flex-wrap: wrap; gap: .55rem; padding: 0; margin: 1rem 0 0; list-style: none; }
+    .feature-list li { padding: .45rem .68rem; border: 1px solid var(--line); border-radius: 9px; color: #cfccdf; font-size: .83rem; }
+    .game-art { min-height: 340px; display: grid; place-items: center; background: radial-gradient(circle, rgba(53,216,255,.18), transparent 47%), linear-gradient(145deg, rgba(131,119,255,.11), transparent); }
+    .phone { width: 205px; aspect-ratio: .52; padding: 11px; border: 1px solid rgba(255,255,255,.24); border-radius: 33px; background: #05050c; box-shadow: 0 26px 70px rgba(0,0,0,.5), 0 0 80px rgba(80,70,210,.15); transform: rotate(7deg); }
+    .screen { height: 100%; border-radius: 23px; display: grid; place-items: center; text-align: center; padding: 1.2rem; background: radial-gradient(circle at 50% 36%, rgba(131,119,255,.24), transparent 30%), #0a0a1a; border: 1px solid rgba(255,255,255,.06); }
+    .screen-symbol { font-size: 4rem; color: var(--cyan); text-shadow: 0 0 28px currentColor; }
+    .screen small { color: var(--muted); letter-spacing: .15em; }
+
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .value-card { padding: 1.6rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025); }
+    .value-number { color: var(--violet); font-size: .82rem; font-weight: 800; letter-spacing: .12em; }
+    .value-card h3 { margin: 1rem 0 .5rem; font-size: 1.18rem; }
+    .value-card p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+    .contact-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(2rem, 7vw, 6rem); align-items: start; }
+    .contact-copy p { color: var(--muted); }
+    .direct-email { display: inline-block; margin-top: 1rem; color: var(--cyan); text-underline-offset: .25rem; }
+    form { padding: clamp(1.35rem, 4vw, 2.2rem); border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018)); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    label { display: block; margin-bottom: .42rem; color: #d8d5e7; font-size: .86rem; font-weight: 650; }
+    .field { margin-bottom: 1rem; }
+    input, select, textarea { width: 100%; color: var(--text); background: rgba(5,5,13,.65); border: 1px solid var(--line); border-radius: 11px; padding: .82rem .9rem; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--violet); box-shadow: 0 0 0 3px rgba(131,119,255,.12); }
+    textarea { min-height: 145px; resize: vertical; }
+    select { color-scheme: dark; }
+    .form-submit { width: 100%; border: 0; cursor: pointer; }
+    .form-note { color: var(--muted); font-size: .76rem; margin: .8rem 0 0; text-align: center; }
+    .form-note a { color: #cbc7ff; }
+    .honey { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--muted); font-size: .85rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 1.2rem; }
+    .footer-links a { color: var(--muted); }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { 50% { transform: scale(.92); opacity: .75; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+    @media (max-width: 820px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { grid-template-columns: 1fr; padding-top: 4rem; text-align: left; }
+      .puzzle-stage { min-height: 390px; order: -1; }
+      .orbit { width: 330px; height: 330px; }
+      .section-head, .contact-grid { display: grid; grid-template-columns: 1fr; }
+      .game-card { grid-template-columns: 1fr; }
+      .game-art { grid-row: 1; }
+      .values { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(calc(100% - 1.25rem), var(--max)); }
+      .brand { font-size: .88rem; }
+      h1 { font-size: clamp(3rem, 18vw, 4.6rem); }
+      .puzzle-stage { min-height: 325px; }
+      .orbit { width: 275px; height: 275px; }
+      .cube { width: 220px; border-radius: 42px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      section { padding: 4.5rem 0; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Ojaskara Studio</h1>
-    <p>Welcome to Ojaskara Studio.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Ojaskara Studio home"><span class="brand-mark" aria-hidden="true"></span>OJASKARA STUDIO</a>
+      <div class="nav-links">
+        <a href="#work">Our work</a>
+        <a href="#approach">Approach</a>
+        <a class="nav-cta" href="#contact">Share feedback</a>
+      </div>
+    </nav>
+  </header>
 
-    <p>We build mobile games and utility applications.</p>
+  <main id="main">
+    <div class="shell hero" id="top">
+      <div>
+        <p class="eyebrow">Independent product studio</p>
+        <h1>Thoughtful apps. <span>Playful ideas.</span></h1>
+        <p class="hero-copy">We create distinctive games, useful apps, and focused digital experiences—made to solve real needs, spark curiosity, and feel genuinely good to use.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore our first release</a>
+          <a class="button button-secondary" href="#contact">Talk to the studio</a>
+        </div>
+      </div>
+      <div class="puzzle-stage" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="cube"><span class="glyph glyph-one">◇</span><span class="glyph glyph-two">△</span><span class="glyph glyph-three">○</span><div class="cube-core"></div></div>
+      </div>
+    </div>
 
-    <p>
-        <a href="privacy-policy.html">Privacy Policy</a>
-    </p>
+    <section id="work">
+      <div class="shell">
+        <div class="section-head">
+          <div><span class="section-kicker">Now playing</span><h2>Think beyond<br />the screen.</h2></div>
+          <p>SolveBox is where our story begins. Future releases will include both games and practical utility apps.</p>
+        </div>
+        <article class="game-card">
+          <div class="game-copy">
+            <span class="tag">Mobile puzzle game</span>
+            <h3>SolveBox</h3>
+            <p>Fifteen handcrafted challenges. No obvious answers. Shake, rotate, listen, observe—and discover how much your phone can become part of the mystery.</p>
+            <ul class="feature-list" aria-label="SolveBox features">
+              <li>15 unique puzzles</li><li>6 languages</li><li>Personal IQ Score Card</li><li>Play at your pace</li>
+            </ul>
+          </div>
+          <div class="game-art" aria-hidden="true"><div class="phone"><div class="screen"><small>SOLVEBOX</small><div class="screen-symbol">◇</div><small>OPEN THE UNEXPECTED</small></div></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="shell">
+        <div class="section-head">
+          <div><span class="section-kicker">How we build</span><h2>Small details.<br />Useful moments.</h2></div>
+          <p>Whether it is a game or a utility, the best product makes a clear idea feel effortless.</p>
+        </div>
+        <div class="values">
+          <article class="value-card"><span class="value-number">01</span><h3>Purpose before features</h3><p>Every product starts with one clear idea: delight someone, solve something, or ideally do both.</p></article>
+          <article class="value-card"><span class="value-number">02</span><h3>Made for more people</h3><p>Clear design, meaningful localization, and accessible choices help every experience feel at home.</p></article>
+          <article class="value-card"><span class="value-number">03</span><h3>Respectful by design</h3><p>No unnecessary accounts or noisy distractions—just focused products that value your time.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="shell contact-grid">
+        <div class="contact-copy">
+          <span class="section-kicker">Your turn</span>
+          <h2>Help us make the next idea better.</h2>
+          <p>Found something confusing? Have an idea for SolveBox or a useful app we should explore? Or simply want to say hello? We read every thoughtful message.</p>
+          <a class="direct-email" href="mailto:ojaskarastudio.dev@gmail.com">ojaskarastudio.dev@gmail.com</a>
+        </div>
+        <form action="https://formsubmit.co/ojaskarastudio.dev@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New feedback for Ojaskara Studio" />
+          <input type="hidden" name="_next" value="https://ojaskarastudio.com/thanks.html" />
+          <input type="hidden" name="_template" value="table" />
+          <div class="honey" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off" /></div>
+          <div class="form-row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required /></div>
+          </div>
+          <div class="field"><label for="topic">What is this about?</label><select id="topic" name="topic"><option value="SolveBox feedback">SolveBox feedback</option><option value="Bug report">Bug report</option><option value="App idea">App or product idea</option><option value="Business enquiry">Business enquiry</option><option value="Something else">Something else</option></select></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what you noticed or what is on your mind…" required></textarea></div>
+          <button class="button button-primary form-submit" type="submit">Send feedback</button>
+          <p class="form-note">Submissions are delivered through FormSubmit. By sending, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell footer-row"><span>&copy; 2026 Ojaskara Studio. Built with curiosity.</span><div class="footer-links"><a href="privacy-policy.html">Privacy</a><a href="app-ads.txt">Ad transparency</a></div></div></footer>
 </body>
 </html>
