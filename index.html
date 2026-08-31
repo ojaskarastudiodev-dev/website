@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ojaskara Studio creates thoughtful games, useful apps, and focused digital experiences, including SolveBox." />
+  <meta name="description" content="Ojaskara Studio creates thoughtful games and useful apps, including SolveBox, Fortlings, MySigns, and BattleCore." />
   <meta name="theme-color" content="#070711" />
   <meta property="og:title" content="Ojaskara Studio — Thoughtful apps. Playful ideas." />
   <meta property="og:description" content="Games, utility apps, and focused digital experiences built with curiosity and care." />
@@ -131,6 +131,16 @@
     .screen { height: 100%; border-radius: 23px; display: grid; place-items: center; text-align: center; padding: 1.2rem; background: radial-gradient(circle at 50% 36%, rgba(131,119,255,.24), transparent 30%), #0a0a1a; border: 1px solid rgba(255,255,255,.06); }
     .screen-symbol { font-size: 4rem; color: var(--cyan); text-shadow: 0 0 28px currentColor; }
     .screen small { color: var(--muted); letter-spacing: .15em; }
+    .release-link { width: fit-content; margin-top: 1.4rem; color: var(--cyan); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: .3rem; }
+    .upcoming-head { margin-top: 4rem; }
+    .upcoming-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .upcoming-card { min-width: 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(145deg, rgba(255,255,255,.05), rgba(255,255,255,.018)); }
+    .app-icon { width: 100%; height: auto; aspect-ratio: 1; display: block; border-radius: 22%; object-fit: cover; box-shadow: 0 18px 44px rgba(0,0,0,.34); }
+    .upcoming-meta { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-top: 1.25rem; }
+    .upcoming-meta .tag { flex: 0 0 auto; }
+    .upcoming-card h3 { margin: .9rem 0 .45rem; font-size: 1.7rem; line-height: 1.1; letter-spacing: -.035em; }
+    .upcoming-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .store-link { display: inline-flex; margin-top: 1.15rem; color: #d8d5ff; font-size: .88rem; font-weight: 700; text-underline-offset: .25rem; }
 
     .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .value-card { padding: 1.6rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025); }
@@ -171,6 +181,9 @@
       .game-card { grid-template-columns: 1fr; }
       .game-art { grid-row: 1; }
       .values { grid-template-columns: 1fr; }
+      .upcoming-grid { grid-template-columns: 1fr; }
+      .upcoming-card { display: grid; grid-template-columns: 150px 1fr; gap: 1.2rem; align-items: center; }
+      .upcoming-card > div { min-width: 0; }
     }
     @media (max-width: 560px) {
       .shell { width: min(calc(100% - 1.25rem), var(--max)); }
@@ -181,6 +194,9 @@
       .cube { width: 220px; border-radius: 42px; }
       .form-row { grid-template-columns: 1fr; gap: 0; }
       section { padding: 4.5rem 0; }
+      .upcoming-card { grid-template-columns: 96px 1fr; padding: 1rem; gap: 1rem; }
+      .upcoming-card h3 { font-size: 1.35rem; }
+      .upcoming-meta { margin-top: 0; }
     }
   </style>
 </head>
@@ -204,7 +220,7 @@
         <h1>Thoughtful apps. <span>Playful ideas.</span></h1>
         <p class="hero-copy">We create distinctive games, useful apps, and focused digital experiences—made to solve real needs, spark curiosity, and feel genuinely good to use.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore our first release</a>
+          <a class="button button-primary" href="#work">Explore our releases</a>
           <a class="button button-secondary" href="#contact">Talk to the studio</a>
         </div>
       </div>
@@ -218,7 +234,7 @@
       <div class="shell">
         <div class="section-head">
           <div><span class="section-kicker">Now playing</span><h2>Think beyond<br />the screen.</h2></div>
-          <p>SolveBox is where our story begins. Future releases will include both games and practical utility apps.</p>
+          <p>SolveBox is where our story begins. Three new experiences are now taking shape across strategy, arcade action, and daily reflection.</p>
         </div>
         <article class="game-card">
           <div class="game-copy">
@@ -228,9 +244,28 @@
             <ul class="feature-list" aria-label="SolveBox features">
               <li>15 unique puzzles</li><li>6 languages</li><li>Personal IQ Score Card</li><li>Play at your pace</li>
             </ul>
+            <a class="release-link" href="https://play.google.com/store/apps/details?id=com.solvebox.puzzle" target="_blank" rel="noopener">Get SolveBox on Google Play →</a>
           </div>
           <div class="game-art" aria-hidden="true"><div class="phone"><div class="screen"><small>SOLVEBOX</small><div class="screen-symbol">◇</div><small>OPEN THE UNEXPECTED</small></div></div></div>
         </article>
+        <div class="section-head upcoming-head">
+          <div><span class="section-kicker">Coming soon</span><h2>Next from<br />the studio.</h2></div>
+          <p>Meet the next three Ojaskara Studio launches, each built around a focused idea and a distinct way to play or reflect.</p>
+        </div>
+        <div class="upcoming-grid">
+          <article class="upcoming-card">
+            <img class="app-icon" src="assets/fortlings-icon.png" alt="Fortlings app icon" width="512" height="512" />
+            <div><div class="upcoming-meta"><span class="tag">Coming soon</span></div><h3>Fortlings</h3><p>Deploy tiny heroes, shape their upgrades, master elemental combos, and defend 15 handcrafted tactical stages.</p><a class="store-link" href="https://play.google.com/apps/testing/com.fortlings.game" target="_blank" rel="noopener">Join testing on Google Play →</a></div>
+          </article>
+          <article class="upcoming-card">
+            <img class="app-icon" src="assets/mysigns-icon.png" alt="MySigns app icon" width="512" height="512" />
+            <div><div class="upcoming-meta"><span class="tag">Coming soon</span></div><h3>MySigns</h3><p>A private daily rashi ritual with personalized readings in English, Hindi, Telugu, Tamil, and Kannada.</p><a class="store-link" href="https://play.google.com/apps/testing/com.ojaskara.mysigns" target="_blank" rel="noopener">Join testing on Google Play →</a></div>
+          </article>
+          <article class="upcoming-card">
+            <img class="app-icon" src="assets/battlecore-icon.png" alt="BattleCore app icon" width="512" height="512" />
+            <div><div class="upcoming-meta"><span class="tag">Coming soon</span></div><h3>BattleCore</h3><p>An offline portrait arcade adventure across 15 sky missions, with unlockable power cores, ships, and upgrades.</p><a class="store-link" href="https://play.google.com/apps/testing/com.battlecore.game" target="_blank" rel="noopener">Join testing on Google Play →</a></div>
+          </article>
+        </div>
       </div>
     </section>
 
