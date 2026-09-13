@@ -47,9 +47,11 @@
 
     <p class="summary">
       <strong>Short version:</strong> Fortlings is a single-player game with no player
-      account. The paid edition has no ads or in-app purchases. Android editions use
-      Firebase Analytics and Crashlytics for usage and stability measurement. The
-      original free Android edition also uses advertising, consent and Remove Ads billing. Ojaskara Studio does not sell personal data.
+      account. The paid editions have no ads or in-app purchases. The paid iOS edition
+      uses Firebase Crashlytics for stability reporting but does not include Firebase
+      Analytics. Android editions use Firebase Analytics and Crashlytics. The original
+      free Android edition also uses advertising, consent and Remove Ads billing.
+      Ojaskara Studio does not sell personal data.
     </p>
 
     <p>
@@ -62,19 +64,23 @@
       Continue and Replay actions without advertising or in-app purchases. Advertising
       ID collection and ad personalization are disabled. The original free Android
       edition (<code>com.fortlings.game</code>) retains its advertising and optional
-      Remove Ads purchase. Paid iOS builds do not initialize advertising or billing
-      providers. References below to advertising, consent and purchase entitlements
-      apply only to the original free Android edition.</p>
+      Remove Ads purchase. The paid iOS edition is purchased upfront through the App Store
+      and does not initialize advertising, billing, tracking, or analytics providers.
+      References below to advertising, consent and purchase entitlements apply only to
+      the original free Android edition.</p>
 
     <h2>1. Information We Collect</h2>
     <p>
       Fortlings does not require a player account and does not ask for your name, email
       address, phone number, contacts, photos, precise location, or payment-card details.
-      Firebase Analytics and Firebase Crashlytics, plus Google Mobile Ads, the User
-      Messaging Platform and Google Play Billing in the original free Android edition, may process app interactions, advertising or
-      app-instance identifiers, approximate location inferred from network information,
-      diagnostics, crash information, device and app metadata, consent choices, and
-      purchase status as applicable to each service and your device or consent settings.
+      On iOS, Firebase Crashlytics may process crash information, diagnostics,
+      installation identifiers, and device and app metadata. On Android, Firebase
+      Analytics and Firebase Crashlytics, plus Google Mobile Ads, the User Messaging
+      Platform and Google Play Billing in the original free edition, may process app
+      interactions, advertising or app-instance identifiers, approximate location inferred
+      from network information, diagnostics, crash information, device and app metadata,
+      consent choices, and purchase status as applicable to each service and your device
+      or consent settings.
     </p>
 
     <h2>2. Local Game Data</h2>
@@ -116,12 +122,13 @@
 
     <h2>5. Analytics and Crash Reporting</h2>
     <p>
-      Firebase Analytics records coarse gameplay and screen events, build information,
-      and progression bands so Ojaskara Studio can understand usage and improve the
-      Game. No developer-defined player name, email address, or precise location is sent.
       Firebase Crashlytics processes crash stack traces, relevant application state,
       device metadata, installation identifiers, and limited gameplay context attached
-      to a crash so stability problems can be diagnosed.
+      to a crash so stability problems can be diagnosed. On Android, Firebase Analytics
+      records coarse gameplay and screen events, build information, and progression bands
+      so Ojaskara Studio can understand usage and improve the Game. The paid iOS edition
+      does not include Firebase Analytics. No developer-defined player name, email address,
+      or precise location is sent.
     </p>
 
     <h2>6. Children's Privacy</h2>
