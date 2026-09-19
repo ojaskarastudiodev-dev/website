@@ -43,13 +43,13 @@
   <main>
     <div class="brand">OJASKARA STUDIO</div>
     <h1>Fortlings Privacy Policy</h1>
-    <p class="subtitle">Effective and last updated: September 12, 2026</p>
+    <p class="subtitle">Effective and last updated: September 19, 2026</p>
 
     <p class="summary">
       <strong>Short version:</strong> Fortlings is a single-player game with no player
       account. The paid editions have no ads or in-app purchases. The paid iOS edition
-      uses Firebase Crashlytics for stability reporting but does not include Firebase
-      Analytics. Android editions use Firebase Analytics and Crashlytics. The original
+      uses Firebase Analytics for gameplay measurement and Firebase Crashlytics for stability reporting.
+      Android editions also use Firebase Analytics and Crashlytics. The original
       free Android edition also uses advertising, consent and Remove Ads billing.
       Ojaskara Studio does not sell personal data.
     </p>
@@ -65,7 +65,7 @@
       ID collection and ad personalization are disabled. The original free Android
       edition (<code>com.fortlings.game</code>) retains its advertising and optional
       Remove Ads purchase. The paid iOS edition is purchased upfront through the App Store
-      and does not initialize advertising, billing, tracking, or analytics providers.
+      and uses Firebase Analytics for gameplay and install measurement, without in-app ads or billing. It does not request tracking permission or use the advertising identifier.
       References below to advertising, consent and purchase entitlements apply only to
       the original free Android edition.</p>
 
@@ -73,8 +73,8 @@
     <p>
       Fortlings does not require a player account and does not ask for your name, email
       address, phone number, contacts, photos, precise location, or payment-card details.
-      On iOS, Firebase Crashlytics may process crash information, diagnostics,
-      installation identifiers, and device and app metadata. On Android, Firebase
+      On iOS, Firebase Analytics and Crashlytics may process gameplay interactions, crash information,
+      diagnostics, app-instance and installation identifiers, and device and app metadata. On Android, Firebase
       Analytics and Firebase Crashlytics, plus Google Mobile Ads, the User Messaging
       Platform and Google Play Billing in the original free edition, may process app
       interactions, advertising or app-instance identifiers, approximate location inferred
@@ -124,10 +124,11 @@
     <p>
       Firebase Crashlytics processes crash stack traces, relevant application state,
       device metadata, installation identifiers, and limited gameplay context attached
-      to a crash so stability problems can be diagnosed. On Android, Firebase Analytics
-      records coarse gameplay and screen events, build information, and progression bands
-      so Ojaskara Studio can understand usage and improve the Game. The paid iOS edition
-      does not include Firebase Analytics. No developer-defined player name, email address,
+      to a crash so stability problems can be diagnosed. On Android and paid iOS from version 1.0.1,
+      Firebase Analytics records app launches, gameplay and screen events, build information,
+      level progress and outcomes so Ojaskara Studio can understand usage and improve the Game.
+      Random session and attempt IDs may be included in gameplay events. Firebase uses an
+      app-instance identifier. No developer-defined player name, email address,
       or precise location is sent.
     </p>
 
@@ -144,7 +145,9 @@
     <p>
       Google LLC provides advertising, consent, analytics, crash reporting, and billing
       services and processes information under Google's privacy policy and applicable
-      service terms. Ojaskara Studio does not sell personal data. Locally stored game data
+      service terms. On iOS, first-open measurement from Firebase is linked to the developer's
+      Google Ads account to measure app install campaigns. Personalized advertising is
+      disabled for paid iOS. Ojaskara Studio does not sell personal data. Locally stored game data
       remains until it is reset, cleared, restored by Android backup, or removed as
       described above. Retention of information processed by Google is controlled by the
       applicable Google service settings and policies.
