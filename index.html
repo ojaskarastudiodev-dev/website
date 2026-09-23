@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ojaskara Studio creates thoughtful games and useful apps, including SolveBox, Fortlings, MySigns, and BattleCore." />
+  <meta name="description" content="Ojaskara Studio creates thoughtful games and useful apps, including RiftHook, Fortlings, BattleCore, HyperArc, and SolveBox. Watch gameplay and find available store releases." />
   <meta name="theme-color" content="#070711" />
   <meta property="og:title" content="Ojaskara Studio — Thoughtful apps. Playful ideas." />
   <meta property="og:description" content="Games, utility apps, and focused digital experiences built with curiosity and care." />
@@ -119,28 +119,40 @@
     h2 { font-size: clamp(2rem, 5vw, 3.7rem); line-height: 1.05; letter-spacing: -.045em; margin: .6rem 0 0; }
     .section-head p { color: var(--muted); max-width: 480px; margin: 0; }
 
-    .game-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; min-height: 430px; border: 1px solid var(--line); border-radius: 28px; background: linear-gradient(135deg, var(--surface-2), var(--surface)); }
-    .game-copy { padding: clamp(2rem, 5vw, 4.2rem); display: flex; flex-direction: column; justify-content: center; }
-    .tag { width: fit-content; padding: .38rem .68rem; border-radius: 999px; background: rgba(53,216,255,.08); border: 1px solid rgba(53,216,255,.22); color: var(--cyan); font-size: .76rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
-    .game-copy h3 { margin: 1.2rem 0 .8rem; font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1; letter-spacing: -.06em; }
-    .game-copy p { color: var(--muted); max-width: 520px; }
-    .feature-list { display: flex; flex-wrap: wrap; gap: .55rem; padding: 0; margin: 1rem 0 0; list-style: none; }
-    .feature-list li { padding: .45rem .68rem; border: 1px solid var(--line); border-radius: 9px; color: #cfccdf; font-size: .83rem; }
-    .game-art { min-height: 340px; display: grid; place-items: center; background: radial-gradient(circle, rgba(53,216,255,.18), transparent 47%), linear-gradient(145deg, rgba(131,119,255,.11), transparent); }
-    .phone { width: 205px; aspect-ratio: .52; padding: 11px; border: 1px solid rgba(255,255,255,.24); border-radius: 33px; background: #05050c; box-shadow: 0 26px 70px rgba(0,0,0,.5), 0 0 80px rgba(80,70,210,.15); transform: rotate(7deg); }
-    .screen { height: 100%; border-radius: 23px; display: grid; place-items: center; text-align: center; padding: 1.2rem; background: radial-gradient(circle at 50% 36%, rgba(131,119,255,.24), transparent 30%), #0a0a1a; border: 1px solid rgba(255,255,255,.06); }
-    .screen-symbol { font-size: 4rem; color: var(--cyan); text-shadow: 0 0 28px currentColor; }
-    .screen small { color: var(--muted); letter-spacing: .15em; }
-    .release-link { width: fit-content; margin-top: 1.4rem; color: var(--cyan); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: .3rem; }
-    .upcoming-head { margin-top: 4rem; }
-    .upcoming-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .upcoming-card { min-width: 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(145deg, rgba(255,255,255,.05), rgba(255,255,255,.018)); }
-    .app-icon { width: 100%; height: auto; aspect-ratio: 1; display: block; border-radius: 22%; object-fit: cover; box-shadow: 0 18px 44px rgba(0,0,0,.34); }
-    .upcoming-meta { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-top: 1.25rem; }
-    .upcoming-meta .tag { flex: 0 0 auto; }
-    .upcoming-card h3 { margin: .9rem 0 .45rem; font-size: 1.7rem; line-height: 1.1; letter-spacing: -.035em; }
-    .upcoming-card p { margin: 0; color: var(--muted); font-size: .92rem; }
-    .store-link { display: inline-flex; margin-top: 1.15rem; color: #d8d5ff; font-size: .88rem; font-weight: 700; text-underline-offset: .25rem; }
+    #work, #contact { scroll-margin-top: 90px; }
+    .game-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+    .game-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(135deg, var(--surface-2), var(--surface)); }
+    .game-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.15fr; align-items: center; }
+    .game-copy { padding: clamp(1.4rem, 3vw, 2.2rem); }
+    .game-copy h3 { margin: .85rem 0 .65rem; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; letter-spacing: -.04em; }
+    .game-copy p { color: var(--muted); margin: .8rem 0; }
+    .tag { display: inline-block; padding: .35rem .65rem; border-radius: 999px; background: rgba(53,216,255,.08); border: 1px solid rgba(53,216,255,.22); color: var(--cyan); font-size: .7rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+    .tag.development { color: var(--amber); border-color: rgba(243,180,91,.25); background: rgba(243,180,91,.06); }
+    .feature-list { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 1.1rem 0; list-style: none; }
+    .feature-list li { padding: .35rem .6rem; border: 1px solid var(--line); border-radius: 8px; color: #cfccdf; font-size: .78rem; }
+    .store-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.3rem; }
+    .store-actions .button { font-size: .86rem; }
+    .game-copy .availability { font-size: .8rem; margin-top: 1rem; }
+    .video-wrap { margin: 0; background: #070711; }
+    .featured .video-wrap { margin: 1.4rem 1.4rem 1.4rem 0; border-radius: 16px; overflow: hidden; }
+    .video-player { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
+    .video-preview { display: block; width: 100%; height: 100%; position: relative; color: white; text-decoration: none; }
+    .video-preview img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .video-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(0,0,0,.78)); }
+    .video-play { position: absolute; z-index: 1; inset: 0; display: grid; place-items: center; }
+    .video-play span { display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; padding-left: 4px; background: rgba(7,7,17,.86); border: 1px solid rgba(255,255,255,.65); font-size: 22px; transition: transform .18s; }
+    .video-preview:hover .video-play span { transform: scale(1.1); }
+    .video-label { position: absolute; z-index: 1; bottom: 1rem; left: 1.1rem; right: 1rem; font-size: .83rem; font-weight: 700; }
+    .video-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-wrap figcaption { padding: .65rem 1rem; color: var(--muted); font-size: .75rem; }
+    .video-wrap figcaption a { color: #d8d5ff; text-underline-offset: .2rem; }
+    a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
+    .video-preview:focus-visible { outline-offset: -4px; }
+    .app-note { display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: 20px; }
+    .app-note img { width: 80px; height: 80px; border-radius: 18px; }
+    .app-note h3 { margin: 0 0 .4rem; }
+    .app-note p { margin: 0; color: var(--muted); }
+    .app-note a { display: inline-block; margin-top: .6rem; color: var(--cyan); }
 
     .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .value-card { padding: 1.6rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025); }
@@ -178,12 +190,10 @@
       .puzzle-stage { min-height: 390px; order: -1; }
       .orbit { width: 330px; height: 330px; }
       .section-head, .contact-grid { display: grid; grid-template-columns: 1fr; }
-      .game-card { grid-template-columns: 1fr; }
-      .game-art { grid-row: 1; }
+      .game-grid { grid-template-columns: 1fr; }
+      .game-card.featured { grid-template-columns: 1fr; }
+      .featured .video-wrap { margin: 0; border-radius: 0; }
       .values { grid-template-columns: 1fr; }
-      .upcoming-grid { grid-template-columns: 1fr; }
-      .upcoming-card { display: grid; grid-template-columns: 150px 1fr; gap: 1.2rem; align-items: center; }
-      .upcoming-card > div { min-width: 0; }
     }
     @media (max-width: 560px) {
       .shell { width: min(calc(100% - 1.25rem), var(--max)); }
@@ -194,9 +204,8 @@
       .cube { width: 220px; border-radius: 42px; }
       .form-row { grid-template-columns: 1fr; gap: 0; }
       section { padding: 4.5rem 0; }
-      .upcoming-card { grid-template-columns: 96px 1fr; padding: 1rem; gap: 1rem; }
-      .upcoming-card h3 { font-size: 1.35rem; }
-      .upcoming-meta { margin-top: 0; }
+      .app-note { align-items: flex-start; gap: 1rem; }
+      .app-note img { width: 56px; height: 56px; }
     }
   </style>
 </head>
@@ -218,9 +227,9 @@
       <div>
         <p class="eyebrow">Independent product studio</p>
         <h1>Thoughtful apps. <span>Playful ideas.</span></h1>
-        <p class="hero-copy">We create distinctive games, useful apps, and focused digital experiences—made to solve real needs, spark curiosity, and feel genuinely good to use.</p>
+        <p class="hero-copy">Swing through neon machinery, defend a tiny kingdom, or discover a puzzle hiding in your phone. Explore our games, watch them in action, and find your next adventure.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore our releases</a>
+          <a class="button button-primary" href="#work">Explore our games</a>
           <a class="button button-secondary" href="#contact">Talk to the studio</a>
         </div>
       </div>
@@ -233,40 +242,100 @@
     <section id="work">
       <div class="shell">
         <div class="section-head">
-          <div><span class="section-kicker">Now playing</span><h2>Think beyond<br />the screen.</h2></div>
-          <p>SolveBox is where our story begins. More experiences are now taking shape across strategy, arcade action, and daily reflection.</p>
+          <div><span class="section-kicker">Games from Ojaskara</span><h2>Find your next<br />way to play.</h2></div>
+          <p>Discover our latest project, RiftHook, alongside our puzzle, strategy, racing, and arcade games. Watch gameplay, then explore the available releases.</p>
         </div>
-        <article class="game-card">
+        <div class="game-grid">
+        <article class="game-card featured" id="rifthook">
           <div class="game-copy">
-            <span class="tag">Mobile puzzle game</span>
-            <h3>SolveBox</h3>
-            <p>Fifteen handcrafted challenges. No obvious answers. Shake, rotate, listen, observe—and discover how much your phone can become part of the mystery.</p>
-            <ul class="feature-list" aria-label="SolveBox features">
-              <li>15 unique puzzles</li><li>6 languages</li><li>Personal IQ Score Card</li><li>Play at your pace</li>
-            </ul>
-            <a class="release-link" href="https://play.google.com/store/apps/details?id=com.solvebox.puzzle" target="_blank" rel="noopener">Get SolveBox on Google Play →</a>
+            <span class="tag development">In development</span>
+            <h3>RiftHook</h3><p><strong>Chain grapples. Find your flow.</strong></p>
+            <p>Swing between glowing hooks, carry your momentum through neon machinery, and use short jetpack bursts to make the next landing. Explore a growing adventure of hazardous routes, rescue missions, and new powers.</p>
+            <ul class="feature-list" aria-label="RiftHook features"><li>Momentum grappling</li><li>Jetpack traversal</li><li>Neon adventure</li></ul>
+            <div class="store-actions"><a class="button button-secondary" href="#contact">Ask about RiftHook</a></div>
+            <p class="availability">In development. Store release details will be shared here.</p>
           </div>
-          <div class="game-art" aria-hidden="true"><div class="phone"><div class="screen"><small>SOLVEBOX</small><div class="screen-symbol">◇</div><small>OPEN THE UNEXPECTED</small></div></div></div>
+          <figure class="video-wrap">
+            <div class="video-player"><a class="video-preview" href="https://www.youtube.com/watch?v=BpX0yYLHAIQ" data-video="BpX0yYLHAIQ" data-title="RiftHook gameplay" aria-label="Play RiftHook gameplay video">
+              <img src="https://i.ytimg.com/vi/BpX0yYLHAIQ/hqdefault.jpg" alt="RiftHook gameplay video preview" width="480" height="360" loading="lazy" />
+              <span class="video-play" aria-hidden="true"><span>▶</span></span><span class="video-label">Gameplay · 28 seconds</span>
+            </a></div>
+            <figcaption><a href="https://www.youtube.com/watch?v=BpX0yYLHAIQ" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+          </figure>
         </article>
-        <div class="section-head upcoming-head">
-          <div><span class="section-kicker">Coming soon</span><h2>Next from<br />the studio.</h2></div>
-          <p>Meet the upcoming Ojaskara Studio launches, each built around a focused idea and a distinct way to play or reflect.</p>
+        <article class="game-card" id="fortlings">
+          <div class="game-copy">
+            <span class="tag">Available on iOS</span>
+            <h3>Fortlings</h3><p><strong>A small squad. A big defense.</strong></p>
+            <p>Place Archer, Ember, and Frost defenders, combine upgrades, and protect your castle across 15 tactical stages. Unlock outfits and replay routes to earn better stars.</p>
+            <ul class="feature-list" aria-label="Fortlings features"><li>15 stages</li><li>Offline play</li><li>No ads or in-app purchases</li></ul>
+            <div class="store-actions"><a class="button button-primary" href="https://apps.apple.com/app/id6811360345" target="_blank" rel="noopener">Download on the App Store</a></div>
+            <p class="availability">iPhone and iPad available now. Android is in closed testing.</p>
+          </div>
+          <figure class="video-wrap">
+            <div class="video-player"><a class="video-preview" href="https://www.youtube.com/watch?v=bS9pJE2N4uI" data-video="bS9pJE2N4uI" data-title="Fortlings gameplay" aria-label="Play Fortlings gameplay video">
+              <img src="https://i.ytimg.com/vi/bS9pJE2N4uI/hqdefault.jpg" alt="Fortlings gameplay video preview" width="480" height="360" loading="lazy" />
+              <span class="video-play" aria-hidden="true"><span>▶</span></span><span class="video-label">Official gameplay trailer · 21 seconds</span>
+            </a></div>
+            <figcaption><a href="https://www.youtube.com/watch?v=bS9pJE2N4uI" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+          </figure>
+        </article>
+        <article class="game-card" id="battlecore">
+          <div class="game-copy">
+            <span class="tag">Available on iOS</span>
+            <h3>BattleCore</h3><p><strong>Take command of the sky.</strong></p>
+            <p>Pilot a starfighter through 15 portrait arcade missions. Dodge formations, protect convoys, and defeat bosses while unlocking six ship presets and nine power cores.</p>
+            <ul class="feature-list" aria-label="BattleCore features"><li>15 missions</li><li>Offline play</li><li>No ads or in-app purchases</li></ul>
+            <div class="store-actions"><a class="button button-primary" href="https://apps.apple.com/app/id6813827960" target="_blank" rel="noopener">Download on the App Store</a></div>
+            <p class="availability">iPhone and iPad available now. Android is in closed testing.</p>
+          </div>
+          <figure class="video-wrap">
+            <div class="video-player"><a class="video-preview" href="https://www.youtube.com/watch?v=W3jrFUeG1Ok" data-video="W3jrFUeG1Ok" data-title="BattleCore gameplay" aria-label="Play BattleCore gameplay video">
+              <img src="https://i.ytimg.com/vi/W3jrFUeG1Ok/hqdefault.jpg" alt="BattleCore gameplay video preview" width="480" height="360" loading="lazy" />
+              <span class="video-play" aria-hidden="true"><span>▶</span></span><span class="video-label">Official gameplay trailer · 35 seconds</span>
+            </a></div>
+            <figcaption><a href="https://www.youtube.com/watch?v=W3jrFUeG1Ok" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+          </figure>
+        </article>
+        <article class="game-card" id="hyperarc">
+          <div class="game-copy">
+            <span class="tag development">Coming soon</span>
+            <h3>HyperArc</h3><p><strong>Race. Hunt. Make the ship yours.</strong></p>
+            <p>Race anti-gravity circuits, thread flight rings, and battle spacecraft across four arenas and 20 levels. Customize five ships and call in Wingmen when combat heats up.</p>
+            <ul class="feature-list" aria-label="HyperArc features"><li>Racing & space combat</li><li>20 levels</li><li>Offline play</li></ul>
+            <div class="store-actions"><a class="button button-secondary" href="/hyperarc.html">Explore HyperArc</a></div>
+            <p class="availability">iOS release coming soon. Android is in closed testing.</p>
+          </div>
+          <figure class="video-wrap">
+            <div class="video-player"><a class="video-preview" href="https://www.youtube.com/watch?v=6nEqQUYCYOM" data-video="6nEqQUYCYOM" data-title="HyperArc gameplay" aria-label="Play HyperArc gameplay video">
+              <img src="https://i.ytimg.com/vi/6nEqQUYCYOM/hqdefault.jpg" alt="HyperArc gameplay video preview" width="480" height="360" loading="lazy" />
+              <span class="video-play" aria-hidden="true"><span>▶</span></span><span class="video-label">Official gameplay trailer · 21 seconds</span>
+            </a></div>
+            <figcaption><a href="https://www.youtube.com/watch?v=6nEqQUYCYOM" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+          </figure>
+        </article>
+        <article class="game-card" id="solvebox">
+          <div class="game-copy">
+            <span class="tag">Available on Android</span>
+            <h3>SolveBox</h3><p><strong>Think beyond the screen.</strong></p>
+            <p>Fifteen handcrafted challenges. No obvious answers. Shake, rotate, listen, and observe to discover how much your phone can become part of the mystery.</p>
+            <ul class="feature-list" aria-label="SolveBox features"><li>15 unique puzzles</li><li>6 languages</li><li>Play at your pace</li></ul>
+            <div class="store-actions"><a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.solvebox.puzzle" target="_blank" rel="noopener">Get it on Google Play</a></div>
+            <p class="availability">Available on Google Play.</p>
+          </div>
+          <figure class="video-wrap">
+            <div class="video-player"><a class="video-preview" href="https://www.youtube.com/watch?v=e8Pxswgj9rQ" data-video="e8Pxswgj9rQ" data-title="SolveBox gameplay" aria-label="Play SolveBox gameplay video">
+              <img src="https://i.ytimg.com/vi/e8Pxswgj9rQ/hqdefault.jpg" alt="SolveBox gameplay video preview" width="480" height="360" loading="lazy" />
+              <span class="video-play" aria-hidden="true"><span>▶</span></span><span class="video-label">Official puzzle game preview</span>
+            </a></div>
+            <figcaption><a href="https://www.youtube.com/watch?v=e8Pxswgj9rQ" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+          </figure>
+        </article>
         </div>
-        <div class="upcoming-grid">
-          <article class="upcoming-card"><div><div class="upcoming-meta"><span class="tag">In development / testing</span></div><h3>HyperArc</h3><p>Offline sci-fi racing and spacecraft combat across four arenas and 20 levels. iOS awaits App Store approval; Android is in closed testing.</p><a class="store-link" href="/hyperarc.html">Explore HyperArc →</a></div></article>
-          <article class="upcoming-card">
-            <img class="app-icon" src="assets/fortlings-icon.png" alt="Fortlings app icon" width="512" height="512" />
-            <div><div class="upcoming-meta"><span class="tag">Coming soon</span></div><h3>Fortlings</h3><p>Deploy tiny heroes, shape their upgrades, master elemental combos, and defend 15 handcrafted tactical stages.</p><a class="store-link" href="https://play.google.com/apps/testing/com.fortlings.game" target="_blank" rel="noopener">Join testing on Google Play →</a></div>
-          </article>
-          <article class="upcoming-card">
-            <img class="app-icon" src="assets/mysigns-icon.png" alt="MySigns app icon" width="512" height="512" />
-            <div><div class="upcoming-meta"><span class="tag">Coming soon</span></div><h3>MySigns</h3><p>A private daily rashi ritual with personalized readings in English, Hindi, Telugu, Tamil, and Kannada.</p><a class="store-link" href="https://play.google.com/apps/testing/com.ojaskara.mysigns" target="_blank" rel="noopener">Join testing on Google Play →</a></div>
-          </article>
-          <article class="upcoming-card">
-            <img class="app-icon" src="assets/battlecore-icon.png" alt="BattleCore app icon" width="512" height="512" />
-            <div><div class="upcoming-meta"><span class="tag">Coming soon</span></div><h3>BattleCore</h3><p>An offline portrait arcade adventure across 15 sky missions, with unlockable power cores, ships, and upgrades.</p><a class="store-link" href="https://play.google.com/apps/testing/com.battlecore.game" target="_blank" rel="noopener">Join testing on Google Play →</a></div>
-          </article>
-        </div>
+        <aside class="app-note" aria-label="More from the studio">
+          <img src="assets/mysigns-icon.png" alt="MySigns app icon" width="80" height="80" loading="lazy" />
+          <div><h3>Beyond games: MySigns</h3><p>A private daily rashi ritual with personalized readings in English, Hindi, Telugu, Tamil, and Kannada. Currently in testing.</p><a href="https://play.google.com/apps/testing/com.ojaskara.mysigns" target="_blank" rel="noopener">Join Android testing →</a></div>
+        </aside>
       </div>
     </section>
 
@@ -289,7 +358,7 @@
         <div class="contact-copy">
           <span class="section-kicker">Your turn</span>
           <h2>Help us make the next idea better.</h2>
-          <p>Found something confusing? Have an idea for SolveBox or a useful app we should explore? Or simply want to say hello? We read every thoughtful message.</p>
+          <p>Found something confusing? Have an idea for one of our games or an app we should explore? Or simply want to say hello? We read every thoughtful message.</p>
           <a class="direct-email" href="mailto:ojaskarastudio.dev@gmail.com">ojaskarastudio.dev@gmail.com</a>
         </div>
         <form action="https://formsubmit.co/ojaskarastudio.dev@gmail.com" method="POST">
@@ -301,7 +370,7 @@
             <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required /></div>
             <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required /></div>
           </div>
-          <div class="field"><label for="topic">What is this about?</label><select id="topic" name="topic"><option value="SolveBox feedback">SolveBox feedback</option><option value="Bug report">Bug report</option><option value="App idea">App or product idea</option><option value="Business enquiry">Business enquiry</option><option value="Something else">Something else</option></select></div>
+          <div class="field"><label for="topic">What is this about?</label><select id="topic" name="topic"><option value="RiftHook feedback">RiftHook feedback</option><option value="Fortlings feedback">Fortlings feedback</option><option value="BattleCore feedback">BattleCore feedback</option><option value="HyperArc feedback">HyperArc feedback</option><option value="SolveBox feedback">SolveBox feedback</option><option value="MySigns feedback">MySigns feedback</option><option value="Bug report">Bug report</option><option value="App idea">App or product idea</option><option value="Business enquiry">Business enquiry</option><option value="Something else">Something else</option></select></div>
           <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what you noticed or what is on your mind…" required></textarea></div>
           <button class="button button-primary form-submit" type="submit">Send feedback</button>
           <p class="form-note">Submissions are delivered through FormSubmit. By sending, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
@@ -311,5 +380,6 @@
   </main>
 
   <footer><div class="shell footer-row"><span>&copy; 2026 Ojaskara Studio. Built with curiosity.</span><div class="footer-links"><a href="privacy-policy.html">Privacy</a><a href="app-ads.txt">Ad transparency</a></div></div></footer>
+  <script src="game-videos.js" defer></script>
 </body>
 </html>
