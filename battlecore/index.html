@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BattleCore — Offline Arcade Space Shooter for iPhone &amp; iPad</title>
+<meta name="description" content="BattleCore is a premium portrait arcade shooter for iPhone and iPad: 15 handcrafted missions, epic bosses, nine power cores and six ships. No ads, no in-app purchases, plays fully offline.">
+<link rel="canonical" href="https://ojaskarastudio.com/battlecore/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BattleCore — Clear the sky">
+<meta property="og:description" content="15 handcrafted missions, epic bosses, no ads. Out now on iPhone and iPad.">
+<meta property="og:url" content="https://ojaskarastudio.com/battlecore/">
+<meta property="og:image" content="https://ojaskarastudio.com/battlecore/battlecore-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6813827960">
+<meta name="theme-color" content="#050c19">
+<link rel="icon" href="/assets/battlecore-icon.png">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2156768671921063');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'BattleCore', content_category: 'iOS game'});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=2156768671921063&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+:root{--ink:#050c19;--panel:#0d1b31;--line:#1e3354;--cyan:#35f2ff;--cyan-2:#2fe6f1;--orange:#ff8a3d;--gold:#ffcf66;--text:#f4f8ff;--muted:#9fb2cc}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;overflow-x:hidden}
+a{color:var(--cyan)}
+img,video{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 60% at 50% -10%,#15345e 0%,rgba(5,12,25,0) 60%),radial-gradient(80% 40% at 100% 60%,rgba(255,138,61,.10),rgba(5,12,25,0) 70%),var(--ink)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:14px;color:var(--muted)}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--text)}
+.hero{display:grid;gap:28px;align-items:center;padding:12px 0 40px}
+@media(min-width:860px){.hero{grid-template-columns:1.05fr .95fr;gap:48px;padding:32px 0 64px}}
+.logo{width:min(440px,86vw);height:auto;margin:0 0 6px -6px;filter:drop-shadow(0 8px 28px rgba(53,242,255,.25))}
+h1{font-size:clamp(30px,6.4vw,50px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:6px 0 12px}
+h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 24px rgba(53,242,255,.35)}
+.lead{font-size:clamp(17px,2.6vw,20px);color:#c9d6ea;max-width:34em}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px;list-style:none}
+.pills li{font-size:14px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(53,242,255,.08);border:1px solid rgba(53,242,255,.28);color:#d8fbff}
+.badge{display:inline-block;border-radius:13px;box-shadow:0 10px 30px rgba(53,242,255,.22);transition:transform .15s ease}
+.badge img{height:60px;width:auto}
+.badge:hover{transform:translateY(-1px)}
+.req{margin-top:12px;font-size:14px;color:var(--muted)}
+.phone{position:relative;justify-self:center;width:min(300px,74vw);aspect-ratio:480/1040;border-radius:38px;padding:9px;background:linear-gradient(160deg,#2a3f63,#0b1629 40%,#1a2d4d);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06),0 0 60px rgba(53,242,255,.18)}
+.phone video,.phone img,.phone iframe{width:100%;height:100%;object-fit:cover;border-radius:30px;background:#000;border:0}
+.trailer-btn{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);white-space:nowrap;display:inline-flex;gap:8px;align-items:center;padding:9px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(5,12,25,.72);color:#fff;font:600 14px/1 inherit;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.trailer-btn span{color:var(--cyan)}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,4.4vw,34px);line-height:1.15;letter-spacing:-.01em;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:24px}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:linear-gradient(180deg,rgba(21,42,74,.7),rgba(13,27,49,.7));border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px}
+.card h3{font-size:18px;margin-bottom:4px}
+.card p{font-size:15px;color:#b9c8de}
+.card .k{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 18px;margin:0 -16px;-webkit-overflow-scrolling:touch}
+.shots img{flex:none;width:min(230px,58vw);height:auto;border-radius:22px;scroll-snap-align:center;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.final{text-align:center;padding:56px 0 64px}
+.final h2{margin-bottom:10px}
+.final .sub{margin-bottom:26px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:13px;color:var(--muted)}
+footer p{margin-bottom:8px}
+footer a{color:#b9d6ff}
+@media(prefers-reduced-motion:reduce){.badge{transition:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<div class="wrap">
+  <nav><a href="/">Ojaskara Studio</a><a href="/battlecore/ios/privacy/">Privacy</a></nav>
+
+  <header class="hero">
+    <div>
+      <img class="logo" src="battlecore-logo.webp" width="720" height="256" alt="BattleCore">
+      <h1>Clear the sky. <em>No ads, ever.</em></h1>
+      <p class="lead">A premium portrait arcade shooter for iPhone and iPad. Your starfighter fires on its own — you steer, dodge, stack power cores and take down screen-filling bosses.</p>
+      <ul class="pills" aria-label="Highlights">
+        <li>15 handcrafted missions</li><li>3 worlds</li><li>Epic bosses</li><li>Plays offline</li>
+      </ul>
+      <a class="badge js-store" data-placement="hero" href="https://apps.apple.com/app/id6813827960?ppid=86755227-9456-4410-953a-663d8e664e09"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="250" height="83"></a>
+      <p class="req">iPhone &amp; iPad · iOS 16 or later · one-time purchase</p>
+    </div>
+
+    <div class="phone" id="player">
+      <video id="loop" autoplay muted loop playsinline preload="auto" poster="battlecore-hero.webp" width="480" height="1040" aria-label="BattleCore gameplay">
+        <source src="battlecore-hero.mp4" type="video/mp4">
+      </video>
+      <button class="trailer-btn" type="button" id="trailer"><span>▶</span> Watch the trailer</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>Built for quick, satisfying runs</h2>
+    <p class="sub">Two-to-four minute missions you can finish on a commute — and replay for a better medal.</p>
+    <div class="grid">
+      <div class="card"><div class="k">Campaign</div><h3>15 handcrafted missions</h3><p>Fly through Storm Ruins, Solar Foundry and Void Garden, each with its own hazards: lightning, solar flares and gravity wells.</p></div>
+      <div class="card"><div class="k">Bosses</div><h3>Screen-filling fights</h3><p>Break the armour of the Portal Warden, Forge Seraph and Rift Leviathan. Chase Bronze, Silver and Gold on every mission.</p></div>
+      <div class="card"><div class="k">Build</div><h3>9 power cores</h3><p>Beams, homing rockets, companion ships, shields and more. Equip three, then upgrade them mid-flight.</p></div>
+      <div class="card"><div class="k">Hangar</div><h3>6 ships to unlock</h3><p>Each ship has its own strength, plus colour finishes and engine trails to make it yours.</p></div>
+      <div class="card"><div class="k">Premium</div><h3>No ads. Ever.</h3><p>One purchase unlocks the whole game. No subscriptions, no in-app purchases, no energy timers.</p></div>
+      <div class="card"><div class="k">Anywhere</div><h3>Fully offline</h3><p>No account, no connection needed. Progress stays on your device.</p></div>
+    </div>
+  </section>
+
+  <section aria-label="Screenshots">
+    <h2>See it in action</h2>
+    <p class="sub">Real in-game footage from iPhone.</p>
+    <div class="shots">
+      <img src="battlecore-shot-1.webp" width="420" height="909" loading="lazy" alt="Missile barrage clearing an enemy formation">
+      <img src="battlecore-shot-2.webp" width="420" height="909" loading="lazy" alt="Boss fight against the Rift Leviathan">
+      <img src="battlecore-shot-3.webp" width="420" height="909" loading="lazy" alt="Combat in the Solar Foundry world">
+      <img src="battlecore-shot-4.webp" width="420" height="909" loading="lazy" alt="Dodging dense enemy fire in the Void Garden">
+    </div>
+  </section>
+
+  <section class="final">
+    <h2>Ready to clear the sky?</h2>
+    <p class="sub">15 missions. 3 worlds. 6 ships. Zero ads.</p>
+    <a class="badge js-store" data-placement="footer" href="https://apps.apple.com/app/id6813827960?ppid=86755227-9456-4410-953a-663d8e664e09"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="250" height="83"></a>
+    <p class="req">iPhone &amp; iPad · iOS 16 or later</p>
+  </section>
+
+  <footer>
+    <p>BattleCore is developed and published by Akshaya Sripathi under the personal publishing brand Ojaskara Studio. © 2026 Ojaskara Studio.</p>
+    <p>The BattleCore app collects no data (<a href="/battlecore/ios/privacy/">app privacy policy</a>). This web page uses the Meta Pixel to measure our advertising — it records page visits, trailer plays and App Store button taps. You can manage ad preferences in your <a href="https://www.facebook.com/adpreferences" rel="noopener">Meta ad settings</a>.</p>
+    <p>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var fb=function(){try{if(window.fbq)fbq.apply(null,arguments)}catch(e){}};
+  document.querySelectorAll('.js-store').forEach(function(a){
+    a.addEventListener('click',function(){
+      fb('track','InitiateCheckout',{content_name:'BattleCore',content_category:'iOS game'});
+      fb('trackCustom','AppStoreClick',{placement:a.dataset.placement});
+    });
+  });
+  var loop=document.getElementById('loop');
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches&&loop){loop.removeAttribute('autoplay');loop.pause();}
+  var btn=document.getElementById('trailer');
+  btn.addEventListener('click',function(){
+    fb('trackCustom','TrailerPlay');
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/fK7eZB2iB0s?autoplay=1&rel=0&playsinline=1';
+    f.title='BattleCore trailer';
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen=true;
+    f.referrerPolicy='strict-origin-when-cross-origin';
+    if(loop)loop.replaceWith(f);
+    btn.remove();
+  });
+})();
+</script>
+</body>
+</html>
