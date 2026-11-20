@@ -47,10 +47,10 @@
 
     <p class="summary">
       <strong>Short version:</strong> Fortlings is a single-player game with no player
-      account. The ad-free Android edition and the paid iOS edition have no ads or in-app purchases. The paid iOS edition
-      uses Firebase Analytics for gameplay measurement and Firebase Crashlytics for stability reporting.
-      Android editions also use Firebase Analytics and Crashlytics. The original
-      free Android edition also uses advertising, consent and Remove Ads billing.
+      account. The Android game (free on Google Play) shows ads from version 1.2.0 and offers an
+      optional one-time Remove Ads purchase; it uses Google Mobile Ads, Google's consent platform,
+      Google Play Billing, Firebase Analytics and Firebase Crashlytics. The paid iOS edition has no ads or
+      in-app purchases and uses Firebase Analytics and Crashlytics only.
       Ojaskara Studio does not sell personal data.
     </p>
 
@@ -60,14 +60,13 @@
     </p>
 
     <h2>Edition differences</h2>
-    <p>The ad-free Android edition (<code>com.fortlings.premium</code>, a free download since November 2026) includes eligible
-      Continue and Replay actions without advertising or in-app purchases. Advertising
-      ID collection and ad personalization are disabled. The original free Android
-      edition (<code>com.fortlings.game</code>) retains its advertising and optional
-      Remove Ads purchase. The paid iOS edition is purchased upfront through the App Store
+    <p>On Android, Fortlings Tower Defense (<code>com.fortlings.premium</code>) is a free download.
+      From version 1.2.0 it shows advertising and offers an optional Remove Ads purchase; versions before
+      1.2.0 had no ads, no in-app purchases and no advertising-ID collection. The earlier test package
+      (<code>com.fortlings.game</code>) behaves the same way as version 1.2.0. The paid iOS edition is purchased upfront through the App Store
       and uses Firebase Analytics for gameplay and install measurement, without in-app ads or billing. It does not request tracking permission or use the advertising identifier.
       References below to advertising, consent and purchase entitlements apply only to
-      the original free Android edition.</p>
+      Android.</p>
 
     <h2>1. Information We Collect</h2>
     <p>
@@ -76,7 +75,7 @@
       On iOS, Firebase Analytics and Crashlytics may process gameplay interactions, crash information,
       diagnostics, app-instance and installation identifiers, and device and app metadata. On Android, Firebase
       Analytics and Firebase Crashlytics, plus Google Mobile Ads, the User Messaging
-      Platform and Google Play Billing in the original free edition, may process app
+      Platform and Google Play Billing, may process app
       interactions, advertising or app-instance identifiers, approximate location inferred
       from network information, diagnostics, crash information, device and app metadata,
       consent choices, and purchase status as applicable to each service and your device
@@ -86,7 +85,7 @@
     <h2>2. Local Game Data</h2>
     <p>
       Campaign progress, stage ratings, cosmetic selections, tutorial completion,
-      settings, and (only in the free Android edition) advertising cadence and a cached
+      settings, and (on Android) advertising cadence and a cached
       Remove Ads entitlement are stored
       locally on your device. You can remove this data by using the in-game
       campaign reset where available, clearing the app's storage in Android settings,
@@ -108,7 +107,7 @@
 
     <h2>4. Advertising and Purchases</h2>
     <p>
-      The original free Android edition shows advertising supplied through Google Mobile Ads:
+      On Android, Fortlings shows advertising supplied through Google Mobile Ads:
       a full-screen interstitial ad may appear after a level ends, and optional rewarded ads are offered
       for a Continue after defeat, a replay of a cleared wave, or bonus Gold between waves. Rewarded ads
       play only when you choose them. After a Remove Ads purchase no ads are shown. Where required, Google's User Messaging Platform asks
@@ -117,9 +116,8 @@
       one-time, non-consumable Remove Ads purchase through Google Play Billing. Google
       processes payment details; Fortlings receives product, purchase-state, and token
       information needed to grant, acknowledge, restore, refund, or revoke the entitlement.
-      The ad-free Android edition is a free download from Google Play (it was a paid download before November 2026).
-      It does not receive payment-card details or synchronize an in-app purchase entitlement.
-      Neither edition has subscriptions or paid gameplay currencies.
+      Fortlings does not receive payment-card details.
+      No edition has subscriptions or paid gameplay currencies.
     </p>
 
     <h2>5. Analytics and Crash Reporting</h2>
